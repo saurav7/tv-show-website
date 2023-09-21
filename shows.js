@@ -1,4 +1,5 @@
 const main = document.querySelector('main')
+const modal = document.querySelector('.modal')
 
 // Making API Call
 async function getTvShows() {
@@ -47,9 +48,58 @@ function showImages(shows) {
         seeInfo.classList.add('show-info')
         seeInfo.innerText = 'See Info'
 
-        
+
         showImgTitleButton.append(img, title, seeInfo)
         showCard.append(showImgTitleButton)
         main.append(showCard)
+
+
+        function openModal(){
+    
+            modal.classList.toggle('hidden')
+
+            // Modal card with image, title, genres, rating
+            const modalCard = document.createElement('div')
+            modalCard.classList.add('modal-card')
+
+            // Close div to close the Modal Card
+            const close = document.createElement('div')
+            close.classList.add('close')
+            close.innerText = '+'
+
+            // Div to hold img, title, genres, rating
+            const modalImgTitleGenresRating = document.createElement('div')
+            modalImgTitleGenresRating.classList.add('img-title-genres-rating')
+
+            // Modal  card's img
+            const modalImg = document.createElement('img')
+            modalImg.src = show.image.medium
+
+            // Modal card's title, genres, rating
+            const titleGenresRating = document.createElement('div')
+            titleGenresRating.classList.add('title-genres-rating')
+
+            // Modal title
+            const modaltitle = document.createElement('h5')
+            modaltitle.classList.add('title')
+            modaltitle.innerHTML = `Name: ${show.name}`
+
+            // Modal genres
+            const modalGenres = document.createElement('h5')
+            modalGenres.classList.add('genres')
+            modalGenres.innerHTML = `Genres: ${show.genres}`
+
+            // Modal rating
+            const modalRating = document.createElement('h5')
+            modalRating.classList.add('rating')
+            modalRating.innerHTML = `Rating: ${show.rating.average}`
+
+            titleGenresRating.append(modaltitle, modalGenres, modalRating)
+            modalImgTitleGenresRating.append(modalImg, titleGenresRating)
+            modalCard.append(close,modalImgTitleGenresRating)
+            modal.append(modalCard)
+
+
+        }
     })
 }
