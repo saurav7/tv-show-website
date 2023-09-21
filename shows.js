@@ -76,6 +76,7 @@ function showImages(shows) {
 
             // Modal  card's img
             const modalImg = document.createElement('img')
+            modalImg.classList.add('card-img')
             modalImg.src = show.image.medium
 
             // Modal card's title, genres, rating
