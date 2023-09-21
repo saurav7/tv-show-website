@@ -48,6 +48,7 @@ function showImages(shows) {
         seeInfo.classList.add('show-info')
         seeInfo.innerText = 'See Info'
 
+        seeInfo.addEventListener('click', openModal)
 
         showImgTitleButton.append(img, title, seeInfo)
         showCard.append(showImgTitleButton)
