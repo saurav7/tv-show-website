@@ -11,3 +11,5 @@ async function getTvShows() {
     }
     
 }
+
+getTvShows()
