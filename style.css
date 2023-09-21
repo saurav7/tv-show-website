@@ -143,3 +143,7 @@ h5 {
     margin-top: 2em;
 
 }
+
+.title, .genres, .rating{
+    font-size: 0.9em;
+}
