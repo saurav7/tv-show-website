@@ -48,6 +48,7 @@ function showImages(shows) {
         seeInfo.classList.add('show-info')
         seeInfo.innerText = 'See Info'
 
+        // Event Listener to open the Modal
         seeInfo.addEventListener('click', openModal)
 
         showImgTitleButton.append(img, title, seeInfo)
@@ -100,6 +101,10 @@ function showImages(shows) {
             modalImgTitleGenresRating.append(modalImg, titleGenresRating)
             modalCard.append(close,modalImgTitleGenresRating)
             modal.append(modalCard)
+
+            // Event listener to close the modal 
+            close.addEventListener('click', closeModal)
+            modal.addEventListener('click',closeModal)
         }
 
         // Function to close the modal
