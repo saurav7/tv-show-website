@@ -147,3 +147,13 @@ h5 {
 .title, .genres, .rating{
     font-size: 0.9em;
 }
+
+.close {
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 24px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
