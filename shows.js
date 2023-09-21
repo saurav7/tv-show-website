@@ -55,6 +55,7 @@ function showImages(shows) {
         main.append(showCard)
 
 
+        // Function to open the Modal
         function openModal(){
     
             modal.classList.toggle('hidden')
@@ -99,8 +100,11 @@ function showImages(shows) {
             modalImgTitleGenresRating.append(modalImg, titleGenresRating)
             modalCard.append(close,modalImgTitleGenresRating)
             modal.append(modalCard)
+        }
 
-
+        // Function to close the modal
+        function closeModal(){
+            modal.classList.add('hidden')
         }
     })
 }
