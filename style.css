@@ -78,3 +78,18 @@ main {
     align-items: center;
     padding: 1.5em;
 }
+
+.show-info {
+    background-color: transparent;
+    border: 1px solid #22254b;
+    border-radius: 50px;
+    color: #e5b12d;
+    font-family: inherit;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+
+.show-info:hover {
+    background-color: #22254b;
+}
