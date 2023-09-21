@@ -47,7 +47,7 @@ function showImages(shows) {
         seeInfo.classList.add('show-info')
         seeInfo.innerText = 'See Info'
 
-
+        
         showImgTitleButton.append(img, title, seeInfo)
         showCard.append(showImgTitleButton)
         main.append(showCard)
