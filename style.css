@@ -71,3 +71,10 @@ main {
     height: 480px;
 }
 
+.show-img-title-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em;
+}
