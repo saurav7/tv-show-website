@@ -102,3 +102,21 @@ h5 {
 .show-img{
     border-radius: 5px;
 }
+
+
+
+/* Modal */
+
+.hidden {
+    visibility: hidden;
+}
+
+.modal {
+    background-color: rgba(55, 55, 100, 0.9);
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+}
