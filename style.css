@@ -46,3 +46,18 @@ nav .nav-content {
 .search::placeholder {
     color: #7378c5;
 }
+
+
+
+/* Main */
+
+main {
+    padding-top: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-left: 100px;
+    padding-right: 100px;
+}
