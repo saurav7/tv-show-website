@@ -93,3 +93,12 @@ main {
 .show-info:hover {
     background-color: #22254b;
 }
+
+h5 {
+    color: #00a881;
+    font-size: 1em;
+}
+
+.show-img{
+    border-radius: 5px;
+}
