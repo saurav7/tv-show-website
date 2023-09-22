@@ -8,3 +8,7 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('sticky')
     }
 })
+
+// Redirect to home
+const home = document.querySelector('.home')
+home.addEventListener('click',getTvShows)
