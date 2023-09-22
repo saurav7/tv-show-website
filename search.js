@@ -14,7 +14,7 @@ form.addEventListener('submit', async function (e) {
 })
 
 // Render Searched Shows
-function showSearchImages(shows){
+function showSearchImages(shows) {
     main.innerHTML = ''
 
     for (let result of shows) {
@@ -41,9 +41,68 @@ function showSearchImages(shows){
             seeInfo.classList.add('show-info')
             seeInfo.innerText = 'See Info'
 
+            seeInfo.addEventListener('click', openModal)
+
             showImgTitleButton.append(img, title, seeInfo)
             showCard.append(showImgTitleButton)
             main.append(showCard)
+
+            // Function to open the Modal
+            function openModal() {
+
+                modal.classList.toggle('hidden')
+
+                // Modal card with image, title, genres, rating
+                const modalCard = document.createElement('div')
+                modalCard.classList.add('modal-card')
+
+                // Close div to close the Modal Card
+                const close = document.createElement('div')
+                close.classList.add('close')
+                close.innerText = '+'
+
+                // Div to hold img, title, genres, rating
+                const modalImgTitleGenresRating = document.createElement('div')
+                modalImgTitleGenresRating.classList.add('img-title-genres-rating')
+
+                // Modal  card's img
+                const modalImg = document.createElement('img')
+                modalImg.classList.add('card-img')
+                modalImg.src = result.show.image.medium
+
+                // Modal card's title, genres, rating
+                const titleGenresRating = document.createElement('div')
+                titleGenresRating.classList.add('title-genres-rating')
+
+                // Modal title
+                const modaltitle = document.createElement('h5')
+                modaltitle.classList.add('title')
+                modaltitle.innerHTML = `Name: ${result.show.name}`
+
+                // Modal genres
+                const modalGenres = document.createElement('h5')
+                modalGenres.classList.add('genres')
+                modalGenres.innerHTML = `Genres: ${result.show.genres}`
+
+                // Modal rating
+                const modalRating = document.createElement('h5')
+                modalRating.classList.add('rating')
+                modalRating.innerHTML = `Rating: ${result.show.rating.average}`
+
+                titleGenresRating.append(modaltitle, modalGenres, modalRating)
+                modalImgTitleGenresRating.append(modalImg, titleGenresRating)
+                modalCard.append(close, modalImgTitleGenresRating)
+                modal.append(modalCard)
+
+                // Event listener to close the modal 
+                close.addEventListener('click', closeModal)
+                modal.addEventListener('click', closeModal)
+            }
+
+            // Function to close the modal
+            function closeModal() {
+                modal.classList.add('hidden')
+            }
         }
     }
 }
