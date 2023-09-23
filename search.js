@@ -5,7 +5,7 @@ form.addEventListener('submit', async function (e) {
     try {
         e.preventDefault();
         const searchTerm = form.elements.query.value
-        const res = await axios.get(`http://api.tvmaze.com/search/shows?q=${searchTerm}`);
+        const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`);
         showSearchImages(res.data)
         form.elements.query.value = '';
     } catch (err) {
