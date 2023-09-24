@@ -162,3 +162,14 @@ h5 {
 .home{
     cursor: pointer;
 }
+
+/* Media Queries */
+@media (min-width: 300px) and (max-width : 600px)  {
+    nav .nav-content{
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: column;
+        gap: 2em;
+        
+    }
+}
